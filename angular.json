@@ -123,6 +123,90 @@
           }
         }
       }
-    }},
-  "defaultProject": "library-http-auth"
+    },
+    "http-authentication-zn": {
+      "projectType": "library",
+      "root": "projects/http-authentication-zn",
+      "sourceRoot": "projects/http-authentication-zn/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/http-authentication-zn/tsconfig.lib.json",
+            "project": "projects/http-authentication-zn/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/http-authentication-zn/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/http-authentication-zn/src/test.ts",
+            "tsConfig": "projects/http-authentication-zn/tsconfig.spec.json",
+            "karmaConfig": "projects/http-authentication-zn/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/http-authentication-zn/tsconfig.lib.json",
+              "projects/http-authentication-zn/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "auth-primise-http": {
+      "projectType": "library",
+      "root": "projects/auth-primise-http",
+      "sourceRoot": "projects/auth-primise-http/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/auth-primise-http/tsconfig.lib.json",
+            "project": "projects/auth-primise-http/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/auth-primise-http/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/auth-primise-http/src/test.ts",
+            "tsConfig": "projects/auth-primise-http/tsconfig.spec.json",
+            "karmaConfig": "projects/auth-primise-http/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/auth-primise-http/tsconfig.lib.json",
+              "projects/auth-primise-http/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "library-http-auth",
+  "cli": {
+    "analytics": "6ec76f33-6a08-42d9-9ff3-539d6bf6b0dd"
+  }
 }
